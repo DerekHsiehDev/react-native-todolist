@@ -13,7 +13,7 @@ import {
 } from "react-native";
 import Task from "./components/Task";
 
-export default function App() {j
+export default function App() {
   const [task, setTask] = useState();
   const [taskItems, setTaskItems] = useState([]);
 
@@ -29,8 +29,6 @@ export default function App() {j
 
     setTaskItems(itemsCopy);
   };
-
-
 
   return (
     <View style={styles.container}>
@@ -54,7 +52,8 @@ export default function App() {j
 
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
-        style={styles.writeTaskWrapper}>
+        style={styles.writeTaskWrapper}
+      >
         <TextInput
           style={styles.input}
           placeholder={"Write a Task"}
